@@ -1,5 +1,5 @@
 # py-servicenow-keepalive
-python code for keeping dev servicenow instance alive
+python based command line utility for keeping dev servicenow instance alive
 
 ### Usage
 ```python3 servicenow-keepalive.py --instance XXXXXXXXXXXXXXX --username XXXXXXXXXXXXXXX --password XXXXXXXXXXXXXXX --sysid XXXXXXXXXXXXXXX```
