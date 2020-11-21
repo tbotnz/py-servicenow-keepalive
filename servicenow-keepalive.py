@@ -43,7 +43,7 @@ if __name__ == "__main__":
                             auth=(results.username, results.password)
                             )
     br_url = f"https://{results.instance_id}.service-now.com/api/now/table/sys_script"
-    data = {
+    br_data = {
         "client_callable": "false",
         "template": "",
         "access": "package_private",
@@ -99,7 +99,17 @@ if __name__ == "__main__":
     requests.post(
                             br_url,
                             headers=headers,
-                            json=data,
+                            json=br_data,
+                            auth=(results.username, results.password)
+                            )
+    inc_url = f"https://{results.instance_id}.service-now.com/api/now/table/incident"
+    inc_data = {
+        "short_description":"keep-alive"
+        }
+    requests.post(
+                            inc_url,
+                            headers=headers,
+                            json=inc_data,
                             auth=(results.username, results.password)
                             )
     try:
